@@ -237,40 +237,45 @@ class MSIDumper:
     #  https://learn.microsoft.com/en-us/windows/win32/msi/summary-list-of-all-custom-action-types
     #
     CustomActionTypes = {
-        'Execute' : {
-            'color' : 'red',
-            'types': (1250, 3298, 226),
-            'desc' : 'Will execute system commands or other executables',
-        },
-        'VBScript' : {
-            'color' : 'red',
-            'types': (1126, 102),
-            'desc' : 'Will run VBScript in-memory',
-        }, 
-        'JScript' : {
-            'color' : 'red',
-            'types': (1125, 101),
-            'desc' : 'Will run JScript in-memory',
-        },
-        'Run-Exe' : {
-            'color' : 'red',
-            'types': (1218, 194),
-            'desc' : 'Will extract executable from inner Binary table, drop it to:\n  C:\\Windows\\Installer\\MSIXXXX.tmp\nand then run it.',
-        },
-        'Load-DLL' : {
-            'color' : 'red',
-            'types': (65, ),
-            'desc' : 'Will load DLL in memory and invoke its exported function.\nThat may also include .NET DLL',
-        },
-        'Run-Dropped-File' : {
-            'color' : 'red',
-            'types': (1746,),
-            'desc' : 'Will run file extracted as a result of installation',
-        },
-        'Set-Directory' : {
+#        'Execute' : {
+#            'color' : 'red',
+#            'types': (1250, 3298, 226),
+#            'desc' : 'Will execute system commands or other executables',
+#        },
+#        'VBScript' : {
+#            'color' : 'red',
+#            'types': (1126, 102),
+#            'desc' : 'Will run VBScript in-memory',
+#        }, 
+#        'JScript' : {
+#            'color' : 'red',
+#            'types': (1125, 101),
+#            'desc' : 'Will run JScript in-memory',
+#        },
+#        'Run-Exe' : {
+#            'color' : 'red',
+#            'types': (1218, 194),
+#            'desc' : 'Will extract executable from inner Binary table, drop it to:\n  C:\\Windows\\Installer\\MSIXXXX.tmp\nand then run it.',
+#        },
+#        'Load-DLL' : {
+#           'color' : 'red',
+#            'types': (65, ),
+#            'desc' : 'Will load DLL in memory and invoke its exported function.\nThat may also include .NET DLL',
+#        },
+#        'Run-Dropped-File' : {
+#            'color' : 'red',
+#            'types': (1746,),
+#            'desc' : 'Will run file extracted as a result of installation',
+#        },
+#        'Set-Directory' : {
+#            'color' : 'cyan',
+#            'types': (51,),
+#            'desc' : 'Will set Directory to a specific path',
+#        },
+	'PrivEsc' : {
             'color' : 'cyan',
-            'types': (51,),
-            'desc' : 'Will set Directory to a specific path',
+            'types': (3170,),
+            'desc' : 'Run with SYSTEM, verify!',
         },
     }
 
