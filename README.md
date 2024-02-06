@@ -1,3 +1,6 @@
+# Notes
+Use Python <3.12 (otherwise you need C++ dev tools which are about 7GB...)
+
 # `msidump`
 
 **MSI Dump** - a tool that analyzes malicious MSI installation packages, extracts files, streams, binary data and incorporates YARA scanner.
